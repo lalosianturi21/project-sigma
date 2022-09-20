@@ -2,12 +2,13 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+use App\Controllers\BaseController;
+
+class Staff extends BaseController
 {
-  /* Ubah File sementara blablabla */
     public function index()
     {
-        $data['main_view'] = 'pages/home';
+        $data['main_view'] = 'pages/staff';
         return view('layout', $data);
     }
 }
