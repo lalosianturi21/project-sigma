@@ -8,13 +8,14 @@
 </head>
 <body>
     <div class="home-section">
-        <div class="texthome">
-            <h1 class="dashboard">H<span class="text1">ello </span><span class="text2">W</span><span class="text3">elcome</span>
-            </h1>
-        </div>
-            <h1 class="text4">To Apotek</h1>
-            <div class="text5"><b><i>Kimia</i></b></div>
-            <div class="text6"><b><i>Farma</i></b></div>
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="dashboard">W<span class="text1">ellcome</span> <span class="text3">To</span> <span class="text2">A</span><span class="text3">potek</span></h1>
+                    <p>Menyediakan Segala obat untuk menyembuhkan penyakit
+                        <br>Anda sakit datanglah ke apotek kami !!
+                    </p>
 
     </div>
     

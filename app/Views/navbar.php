@@ -7,13 +7,10 @@
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   <title>Bootstrap 5 Side Bar Navigation</title>
 </head>
-
-<body>
   <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/a2331dbcf7.js" crossorigin="anonymous"></script>
@@ -28,7 +25,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="/pages">
+        <a href="/dashboard">
         <i class="fa-solid fa-gauge"></i>
           <span class="links_name">Dashboard</span>
         </a>
@@ -42,33 +39,34 @@
        <span class="tooltip">Items</span>
      </li>
      <li>
-       <a href="#">
+       <a href="/staff">
        <i class="fa-solid fa-clipboard-user"></i>
          <span class="links_name">Staff</span>
        </a>
        <span class="tooltip">Staff</span>
      </li>
      <li>
-       <a href="#">
+       <a href="/pembelian">
        <i class="fa-solid fa-cart-shopping"></i>
          <span class="links_name">Pembelian</span>
        </a>
        <span class="tooltip">Pembelian</span>
      </li>
      <li>
-       <a href="#">
+       <a href="penjualan">
        <i class="fa-solid fa-money-check-dollar"></i>
          <span class="links_name">Penjualan</span>
        </a>
+       </li>
        <span class="tooltip">Penjualan</span>
+       <li class="profile">
+        <a href="/home">
+         <i class='bx bx-log-out' id="log_out" ></i>
+         <span class="links_name">Home</span>
+         </a>
      </li>
     </ul>
   </div>
-  <section class="home-section">
-    <div class="logohello">
-      <img src="/images/logohello.png" >
-</div>
-  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
