@@ -12,10 +12,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="dashboard">W<span class="text1">ellcome</span> <span class="text3">To</span> <span class="text2">A</span><span class="text3">potek</span></h1>
-                    <p>Menyediakan Segala obat untuk menyembuhkan penyakit
-                        <br>Anda sakit datanglah ke apotek kami !!
+                    <h1 class="dashboard">Apotek <span class="text-info">Sigma</span></h1>
+                    <p>Selamat datang di Apotek kami, Menyediakan
+                    <br>Segala obat untuk menyembuhkan penyakit
+                        <br>Anda sakit datanglah ke apotek kami.
                     </p>
+                    <span class="text5"> Apotek <span class="text6"> Sigma</span></span>
 
     </div>
     

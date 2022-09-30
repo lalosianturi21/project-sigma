@@ -29,6 +29,7 @@
       <th scope="col">No</th>
       <th scope="col">Nama Pembeli</th>
       <th scope="col">Obat yang dibeli</th>
+      <th scope="col">Harga</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -37,6 +38,7 @@
       <th scope="row">1</th>
       <td>Tio fulalo simatupang</td>
       <td>Bethadine</td>
+      <td>Rp 5.000</td>
       <td>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editmodal">
             Edit
@@ -50,6 +52,7 @@
       <th scope="row">2</th>
       <td>Melky eka putra damanik</td>
       <td>Obat biru</td>
+      <td>Rp 10.000</td>
       <td>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editmodal">
             Edit

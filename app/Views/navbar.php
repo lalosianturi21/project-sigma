@@ -19,8 +19,8 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-            <img src="/images/logo.png" style="width: 60px">
-        <div class="logo_name">KimiaFarma</div>
+            <img src="/images/contoh1.png" style="height: 50px">
+        <div class="logo_name">SIGMA</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
@@ -46,24 +46,25 @@
        <span class="tooltip">Staff</span>
      </li>
      <li>
-       <a href="/pembelian">
+       <a href="penjualan">
+       <i class="fa-solid fa-book"></i>
+         <span class="links_name">Penjualan</span>
+       </a>
+       <span class="tooltip">Penjualan</span>
+     </li>
+     <li>
+     <a href="/pembelian">
        <i class="fa-solid fa-cart-shopping"></i>
          <span class="links_name">Pembelian</span>
        </a>
        <span class="tooltip">Pembelian</span>
-     </li>
-     <li>
-       <a href="penjualan">
-       <i class="fa-solid fa-money-check-dollar"></i>
-         <span class="links_name">Penjualan</span>
-       </a>
-       </li>
-       <span class="tooltip">Penjualan</span>
+      </li>
        <li class="profile">
-        <a href="/home">
-         <i class='bx bx-log-out' id="log_out" ></i>
-         <span class="links_name">Home</span>
-         </a>
+        <form action="/sessions/logout" method="post">
+          <button class="inibutton" >
+         <span class="links_name text-dark">Exit</span>
+         </button>
+         </form>
      </li>
     </ul>
   </div>

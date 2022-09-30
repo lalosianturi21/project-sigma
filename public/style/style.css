@@ -156,6 +156,10 @@
   transition: all 0.5s ease;
   overflow: hidden;
 }
+
+.homecolor{
+  background: #1d1b31;
+}
 .sidebar.open li.profile{
   width: 250px;
 }
@@ -207,14 +211,20 @@
 
 
  .dashboard{
-  color: yellow;
-  font-size: 80px; 
+  color:  yellow;;
+  font-size: 30px; 
+  text-shadow: 10px;
  }
 
 .text1{
   font-size: 20px;
   color: white;
   text-shadow: 2px 2px 2px black;
+}
+
+.inibutton{
+ border-radius: 20px;
+ background: white;
 }
 
 .text2{
@@ -237,10 +247,10 @@
 }
 
 section .text5{
-  width: 100px;
+  width: 150px;
   height: 40px;
   background: yellow;
-  color: white;
+  color: black;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -249,6 +259,7 @@ section .text5{
   font-size: 18px;
   box-shadow: 2px 2px 2px grey, 2px 2px 2px grey, 2px 2px 2px grey;
   bottom: 70px;
+  font-style: italic;
 }
 
 .text6{
@@ -276,14 +287,15 @@ section.alt{
 section h1 {
   text-transform: uppercase;
   font-weight: 900;
-  color: #6c63ff;
+  color: yellow;
   text-align: left;
+  text-shadow: 2px 2px 2px black;
 }
 section p {
-  font-size: 18px;
-  font-weight: 300;
-  text-shadow: 1px 1px 1px black;
-  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+
 }
 
 .sidebar.open ~ .home-section{
