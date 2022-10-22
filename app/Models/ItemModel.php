@@ -65,6 +65,10 @@ class ItemModel extends Model
     }
 
     public function update_data($id, $params) {
+        $uploaded_file = $params->getFile('image_upload');
+        $image_name = $uploaded_file->getRandomName();
+        $uploaded_file->move('assets/images', $image_name);
+
         $data = [
             'nama' => $params->getVar('nama'),
             'tanggal' => $params->getVar('tanggal'),

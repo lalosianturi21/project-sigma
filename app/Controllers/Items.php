@@ -79,8 +79,10 @@ class Items extends BaseController
             'image_upload' => 'uploaded[image_upload]',
             'expired' => 'required|alpha_numeric_space'
         ])) {
+            $item_model = new ItemModel();
             $data['main_view'] = 'items/edit';
             $data['errors'] = $this->validator;
+            $data['item'] = $item_model->get_data($id);
             return view('layout', $data);
         }
 

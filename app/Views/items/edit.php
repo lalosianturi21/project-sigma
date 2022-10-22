@@ -8,7 +8,7 @@
 
 <a href="/items" class="btn btn-sm btn-primary mb-2">List Barang</a>
 
-<form action="/items/<?= $item['id'] ?>" method="post">
+<form action="/items/<?= $item['id'] ?>" method="post" enctype="multipart/form-data">
 <input type="hidden" name="_method" value="PUT"/>
 <div class="mb-3">
         <label for="nama" class="form-label">Nama obat</label>
