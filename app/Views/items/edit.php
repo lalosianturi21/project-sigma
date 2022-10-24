@@ -16,7 +16,10 @@
     </div>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e2fbd9b7c42547384932838c687bad5e581235a0
 <form action="/items/<?= $item['id'] ?>" method="post" enctype="multipart/form-data">
 <input type="hidden" name="_method" value="PUT"/>
 <div class="mb-3 row">
