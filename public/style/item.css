@@ -1,6 +1,8 @@
 .full1{
     position: relative;
-    background: whitesmoke;
+    background-color: #85FFBD;
+background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -22,51 +24,4 @@
     left: 250px;
     width: calc(100% - 250px);
   }
-
-.table-border{
-  border-radius: 20px;
-}
-
-.choosefile{
-  border-radius: 10px;
-  background: black;
-  color: white;
-}
-
-.spanchoose{
-  height: 30px;
-  border-radius: 5px;
-  background: grey;
-}
-
-#datepicklabel {
-	min-width: 3em;
-	height: 3em;
-	display: block;
-	background-size: contain;
-	background-image: url(' https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/512px-Calendar_font_awesome.svg.png');
-	float: left;
-	cursor: pointer;
-}
-
-#datepick {
-	position: relative;
-	left: 0px;
-}
-
-.labeltext { display: none; }
-
-/*Display input field for larger browsers */
-
-@media(min-width: 500px) {
-	#datepicklabel {
-		background-image: none;
-	}
-	#datepick {
-		position: relative;
-		left: 0;
-	}
-	
-	.labeltext { display: inline; }
-}
 

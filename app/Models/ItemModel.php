@@ -60,11 +60,16 @@ class ItemModel extends Model
             'harga' => $params->getVar('harga'),
             'stock' => $params->getVar('stock'),
             'image_name' => $image_name,
+            'expired' => $params->getVar('expired'),
         ];
         return $this->save($data);
     }
 
     public function update_data($id, $params) {
+        $uploaded_file = $params->getFile('image_upload');
+        $image_name = $uploaded_file->getRandomName();
+        $uploaded_file->move('assets/images', $image_name);
+
         $data = [
             'nama' => $params->getVar('nama'),
             'tanggal' => $params->getVar('tanggal'),
