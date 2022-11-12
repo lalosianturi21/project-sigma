@@ -56,9 +56,6 @@ public function search_data($search){
 }
 
 
-
-
-
 public function create_data($params){
     $data = [
         'name' => $params->getVar('name'),
