@@ -20,7 +20,7 @@
     </div>
     <div class="mb-3">
         <label for="tanggal" class="form-label">Tanggal</label>
-        <input type="text" name="tanggal" id="tanggal" class="form-contol" value="<?= set_value('tanggal') ?>">
+        <input type="date" name="tanggal" id="tanggal" class="form-contol" value="<?= set_value('tanggal') ?>">
         <?php if(isset($errors) and $errors->getError('tanggal')) { ?>
         <div class="text-danger mt-2">
             <?= $error = $errors->getError('tanggal'); ?>
@@ -28,14 +28,13 @@
         <?php } ?>
     </div>
     <div class="mb-3">
-        <label for="staff" class="form-label">Staff</label>
-        <input type="text" name="staff" id="staff" class="form-contol" value="<?= set_value('staff') ?>">
-        <?php if(isset($errors) and $errors->getError('staff')) { ?>
-        <div class="text-danger mt-2">
-            <?= $error = $errors->getError('staff'); ?>
+    <label for="staff" class="form-label">Status</label>
+        <select name="staff" class="form-control" id="staff">
+            <option value="Kasir">Kasir </option>
+            <option value="Penjaga toko">Penjaga toko</option>
+        </select>
         </div>
-        <?php } ?>
-    </div>
+
     <div class="mb-3">
         <label for="harga" class="form-label">Harga</label>
         <input type="text" name="harga" id="harga" class="form-contol" value="<?= set_value('harga') ?>">
@@ -67,14 +66,12 @@
     </div>
 
     <div class="mb-3">
-        <label for="expired" class="form-label">Expired</label>
-        <input type="text" name="expired" id="expired" class="form-contol" value="<?= set_value('expired') ?>">
-        <?php if(isset($errors) and $errors->getError('expired')) { ?>
-        <div class="text-danger mt-2">
-            <?= $error = $errors->getError('expired'); ?>
+    <label for="expired" class="form-label">Expired</label>
+        <select name="expired" class="form-control" id="expired">
+            <option value="Belum kadaluarsa">Belum kadaluarsa</option>
+            <option value="Sudah kadaluarsa">Sudah kadaluarsa</option>
+        </select>
         </div>
-        <?php } ?>
-    </div>
     <div class="mb-3">
         <input type="submit" value="Simpan" class="btn btn-primary">
     </div>

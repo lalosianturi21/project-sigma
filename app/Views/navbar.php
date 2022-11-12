@@ -11,6 +11,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  
   <div class="sidebar">
     <div class="logo-details">
             <img src="/images/contoh1.png" style="height: 50px">
@@ -33,30 +34,37 @@
        <span class="tooltip">Items</span>
      </li>
      <li>
-       <a href="/staff">
-       <i class="fa-solid fa-clipboard-user"></i>
-         <span class="links_name">Staff</span>
+       <a href="/medicine">
+       <i class="fa-solid fa-capsules"></i>
+         <span class="links_name">Medicine</span>
        </a>
-       <span class="tooltip">Staff</span>
+       <span class="tooltip">Medicine</span>
      </li>
      <li>
-       <a href="penjualan">
-       <i class="fa-solid fa-book"></i>
-         <span class="links_name">Penjualan</span>
+       <a href="/categories">
+       <i class="fa-solid fa-grip-vertical"></i>
+         <span class="links_name">Categories</span>
        </a>
-       <span class="tooltip">Penjualan</span>
+       <span class="tooltip">Categories</span>
      </li>
      <li>
-     <a href="/pembelian">
+     <a href="">
        <i class="fa-solid fa-cart-shopping"></i>
          <span class="links_name">Pembelian</span>
        </a>
        <span class="tooltip">Pembelian</span>
       </li>
+      <li>
+     <a href="/users">
+     <i class="fa-solid fa-users"></i>
+         <span class="links_name">User</span>
+       </a>
+       <span class="tooltip">User</span>
+      </li>
        <li class="profile">
         <form action="/sessions/logout" method="post">
-          <button class="inibutton" >
-         <span class="links_name text-dark">Exit</span>
+        <button type="submit" class="btn btn-link nav-link">
+        <i class='bx bx-log-out' id="log_out"></i>
          </button>
          </form>
      </li>

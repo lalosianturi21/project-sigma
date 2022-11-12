@@ -1,18 +1,21 @@
-const inputs = document.querySelectorAll('.input');
-
-function focusFunc(){
-    let parent = this.parentNode.parentNode;
-    parent.classList.add('focus');
-}
-
-function blurFunc(){
-    let parent = this.parentNode.parentNode;
-    if(this.value == ""){
-        parent.classList.remove('focus');
-    }
-}
-
-inputs.forEach(input => {
-    input.addEventListener('focus', focusFunc);
-    input.addEventListener('blur', blurFunc);
-});
+$('#recipeCarousel').carousel({
+    interval: 10000
+  })
+  
+  $('.carousel .carousel-item').each(function(){
+      var minPerSlide = 3;
+      var next = $(this).next();
+      if (!next.length) {
+      next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      for (var i=0;i<minPerSlide;i++) {
+          next=next.next();
+          if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+          
+          next.children(':first-child').clone().appendTo($(this));
+        }
+  });

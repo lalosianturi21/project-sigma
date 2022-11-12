@@ -48,6 +48,22 @@ class ItemModel extends Model
         return $this->find($id);
     }
 
+    public function search_data($search){
+        $query = $this->like('LOWER(nama)', strtolower($search));
+        $query = $query->orLike('LOWER(staff)', strtolower($search));
+        $query = $query->orLike('LOWER(harga)', strtolower($search));
+        $query = $query->orLike('LOWER(stock)', strtolower($search));
+        $query = $query->orLike('LOWER(harga)', strtolower($search));
+        $query = $query->orLike('LOWER(tanggal)', strtolower($search));
+        $query = $query->orLike('LOWER(expired)', strtolower($search));
+        $query = $query->orderBy('nama', 'ASC');
+        return $query->paginate(5, 'items');
+    }
+
+
+
+    
+
     public function create_data($params){
         $uploaded_file = $params->getFile('image_upload');
         $image_name = $uploaded_file->getRandomName();

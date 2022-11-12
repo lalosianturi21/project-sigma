@@ -15,11 +15,6 @@
     </div>
     </div>
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> e2fbd9b7c42547384932838c687bad5e581235a0
 <form action="/items/<?= $item['id'] ?>" method="post" enctype="multipart/form-data">
 <input type="hidden" name="_method" value="PUT"/>
 <div class="mb-3 row">
@@ -33,21 +28,19 @@
     </div>
     <div class="mb-3 row">
         <label for="tanggal" class="form-label">Tanggal</label>
-        <input type="text" name="tanggal" id="tanggal" class="form-contol" value="<?= $item['tanggal'] ?>">
+        <input type="date" name="tanggal" id="tanggal" class="form-contol" value="<?= $item['tanggal'] ?>">
         <?php if(isset($errors) and $errors->getError('tanggal')) { ?>
         <div class="text-danger mt-2">
             <?= $error = $errors->getError('tanggal'); ?>
         </div>
         <?php } ?>
     </div>
-    <div class="mb-3 row">
-        <label for="staff" class="form-label">Staff</label>
-        <input type="text" name="staff" id="staff" class="form-contol" value="<?= $item['staff'] ?>">
-        <?php if(isset($errors) and $errors->getError('staff')) { ?>
-        <div class="text-danger mt-2">
-            <?= $error = $errors->getError('staff'); ?>
-        </div>
-        <?php } ?>
+    <div class="mb-3">
+        <label for="staff" class="form-label">Status</label>
+        <select name="staff" class=""form-control>
+            <option value="Kasir" <?=$item['staff'] == "1" ? 'selected' : '' ?>>Kasir</option>
+            <option value="Penjaga toko" <?=$item['staff'] =="2" ? 'selected' : '' ?>>Penjaga toko</option>
+        </select>
     </div>
     <div class="mb-3 row">
         <label for="harga" class="form-label">Harga</label>
@@ -79,14 +72,12 @@
         <?php } ?>
     </div>
 
-    <div class="mb-3 row">
+    <div class="mb-3">
         <label for="expired" class="form-label">Expired</label>
-        <input type="text" name="expired" id="expired" class="form-contol" value="<?= $item['expired'] ?>">
-        <?php if(isset($errors) and $errors->getError('expired')) { ?>
-        <div class="text-danger mt-2">
-            <?= $error = $errors->getError('expired'); ?>
-        </div>
-        <?php } ?>
+        <select name="expired" class=""form-control>
+            <option value="Belum kadaluarsa" <?=$item['expired'] == "1" ? 'selected' : '' ?>>Belum kadaluarsa</option>
+            <option value="Sudah kadaluarsa" <?=$item['expired'] =="2" ? 'selected' : '' ?>>Sudah kadaluarsa</option>
+        </select>
     </div>
 <div class="mb-3">
     <input type="submit" value="Perbarui" class="btn btn-primary">

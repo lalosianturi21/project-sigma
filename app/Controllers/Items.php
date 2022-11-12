@@ -21,9 +21,16 @@ class Items extends BaseController
         }
 
         $item_model = new ItemModel();
-        $data['main_view'] ='items/index';
-        $data['items'] = $item_model->get_all_data();
-        return view('layout', $data);
+        $search = $this->request->getVar('search') ?? '';
+        $data['items'] = $item_model->search_data($search);
+        $data['pager'] = $item_model->pager;
+        if($this->request->isAJAX()) {
+            return view('items/_items', $data);
+        } else {
+            $data['main_view'] ='items/index';
+            return view('layout', $data);
+        }
+
     }
 
     public function new()
@@ -55,11 +62,30 @@ class Items extends BaseController
     }
 
     public function delete($id) {
-        $id = $this->request->getVar('id');
-        $item_model = new ItemModel();
-        $item_model->delete($id);
-        $this->session->setFlashdata('success', 'Barang berhasil dihapus');
-        return redirect()->to('/items');
+        if ($this->request->isAJAX()) {
+            $id = $this->request->getVar('id');
+            $item_model = new ItemModel();
+            if($item_model->delete($id)) {
+                $data = [
+                    'status' => 200,
+                    'message' => 'Barang berhasil dihapus',
+                    'id' => $id
+                ];
+            } else {
+                $data = [
+                    'status' => 500,
+                    'message' => 'Barang gagal dihapus karena tidak ditemukan. Coba refresh kembali!!',
+                    'id'=> $id
+                ];
+            }
+            } else {
+                $data = [
+                    'status' => 500,
+                    'message' => 'Anda tidak diizinkan untuk menghapus data',
+                    'id' => null
+                ];
+            }
+        echo json_encode($data);
     }
 
     public function edit($id){
@@ -90,5 +116,11 @@ class Items extends BaseController
         $item_model->update_data($id, $this->request);
         $this->session->setFlashdata('success', 'Barang berhasil diperbarui');
         return redirect()->to('/items');
+    }
+
+    public function show($id) {
+        $item_model = new ItemModel();
+        $data['item'] = $item_model->get_data($id);
+        return view('items/show', $data);
     }
 }

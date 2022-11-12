@@ -7,8 +7,8 @@
     <title>Document</title> 
 </head>
 <body>
-    <div class="home-section">
-    <section id="hero">
+<div class="home-section">
+    <section id="hero" class="section1">
         <div class="container">
             <div class="row">
                 <div class="col">

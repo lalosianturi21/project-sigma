@@ -18,7 +18,7 @@ class Pages extends BaseController
             return redirect()->to('/');
         }
 
-            $data['main_view'] = 'pages/index';
+            $data['main_view'] = 'pages/home';
             return view('layout', $data);
         }
 

@@ -36,6 +36,9 @@ $routes->resource('pages');
 $routes->post('sessions/logout', 'Sessions::logout');
 $routes->resource('sessions');
 $routes->resource('items');
+$routes->resource('medicine');
+$routes->resource('users');
+$routes->resource('categories');
 
 /*
  * --------------------------------------------------------------------
