@@ -39,6 +39,15 @@ $routes->resource('items');
 $routes->resource('medicine');
 $routes->resource('users');
 $routes->resource('categories');
+$routes->resource('purchases');
+$routes->resource('itemunits');
+$routes->resource('sales');
+$routes->resource('saleitems');
+$routes->resource('suppliers');
+
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes){
+    $routes->resource('medicine');
+});
 
 /*
  * --------------------------------------------------------------------

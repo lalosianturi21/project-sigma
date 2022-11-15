@@ -1,7 +1,7 @@
 <div class="full1">
     <div class="text-dark p-1 text-center shadow-lg fontbg">
         <div class="title1">
-        <h1 > Categories <i class="fa-solid fa-book"></i> </h1>
+        <h1 >Sales<i class="fa-solid fa-book"></i> </h1>
     </div>
     </div>
     
@@ -15,9 +15,9 @@
     
         <div class="float-md-none">
       <div class="container pt-2">
-    <button class="btn btn-dark button1"><a href="categories/new" style="text-decoration: none; color: white">Add item <i class="fa-solid fa-cart-shopping"></i></a></button>
+    <button class="btn btn-dark button1"><a href="sales/new" style="text-decoration: none; color: white">Add Sales <i class="fa-solid fa-cart-shopping"></i></a></button>
     <div class="col-12 col-xl-10 col-lg-6 float-end">
-            <form action="/categories" method="get" class="mb-2" id="form-search">
+            <form action="/sales" method="get" class="mb-2" id="form-search">
                 <div class="input-group">
                     <span class="input-group-text fw-bold text-light"  style="background-color: #1a374d">Cari Barang</span>
                     <input type="text" name="search" id="search" placeholder="Masukkan nama barang" class="form-control shadow-lg" >
@@ -31,7 +31,7 @@
 
 
     <div id="table-result">
-            <?= view('categories/_categories', ['categories' => $categories]) ?>
+            <?= view('sales/_sales', ['sales' => $sales]) ?>
         </div>
             </div>
     </div>
@@ -75,7 +75,7 @@
                         dataType: 'json',
                         success: function(data) {
                             if(data.status == 200) {
-                                $("#categorie_" + data.id).remove()
+                                $("#sale_" + data.id).remove()
                             } else {
                                 alert(data.message)
                             }

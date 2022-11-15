@@ -18,7 +18,7 @@
             </tr>
             <?php else: ?>
                 <?php foreach($users as $index => $item): ?>
-                    <tr id="item_<?= $item['id'] ?>">
+                    <tr id="item_<?= $item['id'] ?>" class="text-center">
                     <td><?= $order_number++ ?></td>
                     <td><?= $item['name'] ?></td>
                     <td><?= $item['email'] ?></td>

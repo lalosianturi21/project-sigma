@@ -43,7 +43,7 @@
                                     <input type="hidden" name="id" value="<?= $medicine['id'] ?>" />
                                     <a href="/medicine/<?= $medicine['id'] ?>" class="btn btn-sm btn-info btn-lihat">Lihat</a>
                                     <a href="/medicine/<?= $medicine['id'] ?>/edit" class="btn btn-sm btn-warning">Ubah</a>
-                                    <button type="submit" class="btn btn-sm btn-danger btnHapus mb-4">Hapus</button>
+                                    <button type="submit" class="btn btn-sm btn-danger btnHapus ">Hapus</button>
                                 </form>
                             </td>
                         <?php endforeach; ?>

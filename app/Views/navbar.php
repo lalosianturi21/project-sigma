@@ -48,11 +48,34 @@
        <span class="tooltip">Categories</span>
      </li>
      <li>
-     <a href="">
-       <i class="fa-solid fa-cart-shopping"></i>
-         <span class="links_name">Pembelian</span>
+     <a href="/purchases">
+     <i class="fa-brands fa-shopify"></i>
+         <span class="links_name">Purchases</span>
        </a>
-       <span class="tooltip">Pembelian</span>
+       <span class="tooltip">Purchases</span>
+      </li>
+      <li>
+      <li>
+     <a href="/itemunits">
+     <i class="fa-solid fa-tag"></i>
+         <span class="links_name">Item Units</span>
+       </a>
+       <span class="tooltip">Item Units</span>
+      </li>
+      <li>
+      <li>
+     <a href="/sales">
+     <i class="fa-solid fa-shop"></i>
+         <span class="links_name">Sales</span>
+       </a>
+       <span class="tooltip">sales</span>
+      </li>
+      <li>
+     <a href="/suppliers">
+     <i class="fa-solid fa-truck-front"></i>
+         <span class="links_name">Suppliers</span>
+       </a>
+       <span class="tooltip">Suppliers</span>
       </li>
       <li>
      <a href="/users">
