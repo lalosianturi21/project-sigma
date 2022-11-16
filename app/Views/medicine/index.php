@@ -3,6 +3,7 @@
         <div class="title1">
         <h1 >Medicine <i class="fa-solid fa-pills"></i></h1>
     </div>
+    <?= current_user() == NULL ? "-" : current_user()['name'] ?>
     </div>
     
 </br>
@@ -17,7 +18,7 @@
       <div class="container pt-2">
     <button class="btn btn-dark button1"><a href="medicine/new" style="text-decoration: none; color: white">Add item <i class="fa-solid fa-cart-shopping"></i></a></button>
     <div class="col-12 col-xl-10 col-lg-6 float-end">
-            <form action="/medicine" method="get" class="mb-2" id="form-search">
+            <form action="/medicine" method="get" class="mb-4" id="form-search">
                 <div class="input-group">
                     <span class="input-group-text fw-bold text-light"  style="background-color: #1a374d">Cari Barang</span>
                     <input type="text" name="search" id="search" placeholder="Masukkan nama barang" class="form-control shadow-lg" >

@@ -32,7 +32,7 @@ class Itemunits extends BaseController
             return view('layout', $data);
         }
     }
-
+    
     public function new()
     {
         $data['main_view'] = 'itemunits/new';

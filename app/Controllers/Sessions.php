@@ -36,7 +36,7 @@ class Sessions extends BaseController
             $this->session->setFlashdata('danger', 'email dan password yang anda masukkan salah');
             return redirect()->to('/');
 
-        }
+    }
 
 }
     

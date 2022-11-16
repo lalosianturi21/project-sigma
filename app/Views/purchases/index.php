@@ -3,6 +3,7 @@
         <div class="title1">
         <h1 >Purchases<i class="fa-solid fa-book"></i> </h1>
     </div>
+    <?= current_user() == NULL ? "-" : current_user()['name'] ?>
     </div>
     
 </br>

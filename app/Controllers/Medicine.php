@@ -130,5 +130,18 @@ class Medicine extends BaseController
             $data['medicine'] = $medicine_model->get_data($id);
             return view('medicine/show', $data);
         }
-    
+
+        public function get_autocomplete(){
+            $medicine_model = new MedicineModel();
+            $search = $this->request->getVar('term') ?? '';
+            $results = $medicine_model->search_data($search);
+            foreach($results as $row):
+                $arr_result[] = [
+                    'id' => $row['id'],
+                    'label' => $row['name']
+                ];
+            endforeach;
+            echo json_encode($arr_result);
+        }
+
 }

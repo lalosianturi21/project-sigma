@@ -20,7 +20,7 @@
     </div>
     <div class="mb-3">
         <label for="invoice_date" class="form-label">Invoice date</label>
-        <input type="date" name="invoice_date" id="invoice_date" class="form-contol" value="<?= set_value('invoice_date') ?>">
+        <input type="text" name="invoice_date" id="invoice_date" class="form-contol" value="<?= set_value('invoice_date') ?>">
         <?php if(isset($errors) and $errors->getError('invoice_date')) { ?>
         <div class="text-danger mt-2">
             <?= $error = $errors->getError('invoice_date'); ?>
@@ -66,3 +66,6 @@
 </form>
 </div>
 
+<script>
+  $('#invoice_date').datetimepicker();
+</script>

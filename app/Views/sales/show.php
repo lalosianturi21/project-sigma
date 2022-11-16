@@ -51,7 +51,7 @@
     <?php foreach($sale_items as $index => $sale_item): ?>
       <tr>
         <td><?= $index + 1 ?></td>
-        <td><?= $sale_item->medician_name ?></td>
+        <td><?= $sale_item->medicine_name ?></td>
         <td><?= $sale_item->quantity ?></td>
         <td><?= $sale_item->price ?></td>
         <td><?= $sale_item->subtotal ?></td>
@@ -104,7 +104,7 @@
     $('#search_item').autocomplete({
       source: "<?= site_url('medicine/get_autocomplete') ?>",
       select: function(event, ui){
-        $('#medicine_id').val(ui.medicine.id);
+        $('#medicine_id').val(ui.item.id);
       }
     })
 

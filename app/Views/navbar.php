@@ -26,13 +26,6 @@
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
-      <li>
-       <a href="/items">
-       <i class="fa-solid fa-circle-plus"></i>
-         <span class="links_name">Items</span>
-       </a>
-       <span class="tooltip">Items</span>
-     </li>
      <li>
        <a href="/medicine">
        <i class="fa-solid fa-capsules"></i>

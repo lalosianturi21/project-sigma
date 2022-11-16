@@ -19,7 +19,7 @@ class Sales extends Migration
                 'constraint' => 255
             ],
             'invoice_date' => [
-                'type' => 'date'
+                'type' => 'datetime'
             ],
             'supplier_id' => [
                 'type' => 'integer',

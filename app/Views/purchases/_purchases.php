@@ -5,6 +5,7 @@
         <thead class="table-dark text-light rounded">
         <tr class="text-center">
                 <th scope="col">No</th>
+                <th scope="col">#</th>
                 <th scope="col">Invoice No</th>
                 <th scope="col">Invoice Date</th>
                 <th scope="col">Supplier id</th>
@@ -22,6 +23,9 @@
                     <?php foreach($purchases as $index => $purchase): ?>
                         <tr id="purchase_<?= $purchase['id'] ?>" class="text-center">
                             <td><?= $index + 1 ?></td>
+                            <td>
+                            <a href="purchases/<?= $purchase['id'] ?>">Detail</a>
+                            </td>
                             <td><?= $purchase['invoice_no'] ?></td>
                             <td><?= $purchase['invoice_date'] ?></td>
                             <td><?= $purchase['supplier_id'] ?></td>
@@ -31,7 +35,6 @@
                                 <form action="/purchases/delete" method="post" class="form-delete">
                                     <input type="hidden" name="_method" value="DELETE" />
                                     <input type="hidden" name="id" value="<?= $purchase['id'] ?>" />
-                                    <a href="/purchases/<?= $purchase['id'] ?>" class="btn btn-sm btn-info btn-lihat">Lihat</a>
                                     <a href="/purchases/<?= $purchase['id'] ?>/edit" class="btn btn-sm btn-warning">Ubah</a>
                                     <button type="submit" class="btn btn-sm btn-danger btnHapus">Hapus</button>
                                 </form>

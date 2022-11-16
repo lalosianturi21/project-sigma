@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\PurchasesModel;
+use App\Models\PurchaseItemModel;
 
 
 class Purchases extends BaseController
@@ -117,9 +118,12 @@ class Purchases extends BaseController
 
     public function show($id) {
         $purchases_model = new PurchasesModel();
+        $purchase_item_model = new PurchaseItemModel();
         $data['purchase'] = $purchases_model->get_data($id);
-        return view('purchases/show', $data);
-    
+        $data['purchase_items'] = $purchase_item_model->get_data_by_purchase($id);
+        $data['main_view'] = 'purchases/show';
+        return view('layout', $data);
+        
     }
     
 }

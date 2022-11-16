@@ -6,7 +6,7 @@ use CodeIgniter\Database\Migration;
 
 class Purchases extends Migration
 {
-    public function up()
+        public function up()
     {
         $this->forge->addField([
             'id' => [
@@ -19,7 +19,7 @@ class Purchases extends Migration
                 'constraint' => 255
             ],
             'invoice_date' => [
-                'type' => 'date'
+                'type' => 'datetime'
             ],
             'supplier_id' => [
                 'type' => 'integer',

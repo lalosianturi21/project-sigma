@@ -49,6 +49,10 @@ class SaleItemModel extends Model
         return $query->get()->getResult();
     }
 
+    public function get_data($id){
+        return $this->find($id);
+    }
+
     public function create_data($params){
         $subtotal = $params->getVar('quantity') * $params->getVar('price');
         $data = [
@@ -59,5 +63,17 @@ class SaleItemModel extends Model
             'subtotal' => $subtotal
         ];
         return $this->save($data);
+    }
+
+    public function update_data($id, $params) {
+        $data = [
+            'sale_id' => $params->getVar('sale_id'),
+            'medicine_id' => $params->getVar('medicine_id'),
+            'quantity' => $params->getVar('quantity'),
+            'price' => $params->getVar('price'),
+            'subtotal' => $subtotal
+        
+        ];
+        return $this->update($id, $data);
     }
 }
