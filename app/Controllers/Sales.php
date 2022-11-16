@@ -45,7 +45,7 @@ class Sales extends BaseController
     public function create()
     {
         if(!$this->validate([
-            'invoice_no' => "required|integer",
+            // 'invoice_no' => "required|integer",
             'invoice_date' => 'required|valid_date',
             'supplier_id' => 'required|integer',
             'grand_total' => 'required|integer',
@@ -98,7 +98,7 @@ class Sales extends BaseController
 
     public function update($id){
         if(!$this->validate([
-            'invoice_no' => "required|integer",
+            // 'invoice_no' => "required|integer",
             'invoice_date' => 'required|valid_date',
             'supplier_id' => 'required|integer',
             'grand_total' => 'required|decimal',

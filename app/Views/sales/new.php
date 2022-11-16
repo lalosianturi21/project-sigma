@@ -9,7 +9,7 @@
 <a href="/sales" class="btn btn-sm btn-primary mb-2">List Barang</a>
 
 <form action="/sales" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label for="invoice_no" class="form-label">Invoice No</label>
         <input type="text" name="invoice_no" id="invoice_no" class="form-contol" value="<?= set_value('invoice_no') ?>">
         <?php if(isset($errors) and $errors->getError('invoice_no')) { ?>
@@ -17,7 +17,7 @@
             <?= $error = $errors->getError('invoice_no'); ?>
         </div>
         <?php } ?>
-    </div>
+    </div> -->
     <div class="mb-3">
         <label for="invoice_date" class="form-label">Invoice date</label>
         <input type="text" name="invoice_date" id="invoice_date" class="form-contol" value="<?= set_value('invoice_date') ?>">

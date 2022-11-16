@@ -66,7 +66,6 @@ public function create_data($params){
         $number = str_pad($number, 5, '0', STR_PAD_LEFT);
     }
     $invoice_no = $prefix . $number;
-    echo $invoice_no; exit;
 
     $data = [
         'invoice_no' => $invoice_no,
