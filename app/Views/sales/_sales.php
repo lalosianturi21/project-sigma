@@ -29,7 +29,7 @@
                             <td><?= $sale['invoice_no'] ?></td>
                             <td><?= $sale['invoice_date'] ?></td>
                             <td><?= $sale['supplier_id'] ?></td>
-                            <td><?= $sale['grand_total'] ?></td>
+                            <td><?= thousand_separator($sale['grand_total']) ?></td>
                             <td><?= $sale['user_id'] ?></td>
                             <td>
                                 <form action="/sales/delete" method="post" class="form-delete">

@@ -14,7 +14,7 @@ class SalesModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['invoice_no', 'invoice_date', 'supplier_id'];
+    protected $allowedFields    = ['invoice_no', 'invoice_date', 'supplier_id', 'grand_total'];
 
     // Dates
     protected $useTimestamps = false;
@@ -66,11 +66,13 @@ public function create_data($params){
         $number = str_pad($number, 5, '0', STR_PAD_LEFT);
     }
     $invoice_no = $prefix . $number;
+    
 
     $data = [
         'invoice_no' => $invoice_no,
         'invoice_date' => $params->getVar('invoice_date'),
-        'supplier_id' => $params->getVar('supplier_id')
+        'supplier_id' => $params->getVar('supplier_id'),
+        'user_id' => current_user() ['id']
     ];
     return $this->save($data);
 }
@@ -81,6 +83,17 @@ public function update_data($id, $params) {
         'invoice_date' => $params->getVar('invoice_date'),
         'supplier_id' => $params->getVar('supplier_id')
     
+    ];
+    return $this->update($id, $data);
+}
+
+public function update_grand_total($id) {
+    $query = $this->where('sales.id', $id);
+    $query = $query->join('sale_items', 'sale_items.sale_id = sales.id');
+    $query = $query->selectSum('subtotal', 'grand_total');
+    $query = $query->get()->getRow();
+    $data = [
+        'grand_total'  => $query->grand_total
     ];
     return $this->update($id, $data);
 }

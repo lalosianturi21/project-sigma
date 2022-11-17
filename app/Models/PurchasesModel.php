@@ -58,8 +58,19 @@ public function search_data($search){
 }
 
 public function create_data($params){
+
+    $prefix = 'SL' . date('y') . date('m');
+    $query = $this->like('invoice_no', $prefix)->orderBy('invoice_no', 'desc')->get()->getRow();
+    if($query == NULL){
+        $number = '00001';
+    } else {
+        $number = intval(str_replace($prefix, '', $query->invoice_no)) + 1;
+        $number = str_pad($number, 5, '0', STR_PAD_LEFT);
+    }
+    $invoice_no = $prefix . $number;
+
     $data = [
-        'invoice_no' => $params->getVar('invoice_no'),
+        'invoice_no' => $invoice_no,
         'invoice_date' => $params->getVar('invoice_date'),
         'supplier_id' => $params->getVar('supplier_id'),
         'grand_total' => $params->getVar('grand_total'),

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Models\SalesModel;
 
 class SaleItemModel extends Model
 {
@@ -62,7 +63,12 @@ class SaleItemModel extends Model
             'price' => $params->getVar('price'),
             'subtotal' => $subtotal
         ];
-        return $this->save($data);
+       if($this->save($data)) {
+        $sales_model = new SalesModel() ;
+        return $sales_model->update_grand_total($params->getVar('sale_id'));
+       } else {
+        return false;
+       }
     }
 
     public function update_data($id, $params) {

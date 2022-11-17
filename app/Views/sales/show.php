@@ -25,11 +25,7 @@
         </tr>
         <tr>
             <th width="30%">Grand Total</th>
-            <td><?= $sale["grand_total"] ?></td>
-        </tr>
-        <tr>
-            <th width="30%">User Id</th>
-            <td><?= $sale["user_id"] ?></td>
+            <td><?= thousand_separator($sale['grand_total']) ?></td>
         </tr>
     </tbody>
 </table>

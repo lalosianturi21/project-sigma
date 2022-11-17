@@ -48,15 +48,7 @@
     </div>
 
 
-    <div class="mb-3">
-        <label for="user_id" class="form-label">User ID</label>
-        <input type="text" name="user_id" id="user_id" class="form-contol" value="<?= set_value('user_id') ?>">
-        <?php if(isset($errors) and $errors->getError('user_id')) { ?>
-        <div class="text-danger mt-2">
-            <?= $error = $errors->getError('user_id'); ?>
-        </div>
-        <?php } ?>
-    </div>
+   
 
     <div class="mb-3">
         <input type="submit" value="Simpan" class="btn btn-primary">
