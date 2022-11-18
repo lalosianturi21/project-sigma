@@ -1,7 +1,7 @@
 <div class="full1">
     <div class="text-dark p-1 text-center shadow-lg fontbg">
         <div class="title1">
-        <h1 >Medicine <i class="fa-solid fa-pills"></i></h1>
+        <h1 >Medicine <i class="fa-solid fa-capsules"></i></h1>
     </div>
     <?= current_user() == NULL ? "-" : current_user()['name'] ?>
     </div>
@@ -16,11 +16,11 @@
     
         <div class="float-md-none">
       <div class="container pt-2">
-    <button class="btn btn-dark button1"><a href="medicine/new" style="text-decoration: none; color: white">Add item <i class="fa-solid fa-cart-shopping"></i></a></button>
+    <button class="btn btn-dark mb-3"><a href="medicine/new" style="text-decoration: none; color: white">Add Medicine <i class="fa-solid fa-pills"></i></a></button>
     <div class="col-12 col-xl-10 col-lg-6 float-end">
             <form action="/medicine" method="get" class="mb-4" id="form-search">
                 <div class="input-group">
-                    <span class="input-group-text fw-bold text-light"  style="background-color: #1a374d">Cari Barang</span>
+                    <span class="input-group-text fw-bold text-light"  style="background-color: #1a374d">Cari Medicine</span>
                     <input type="text" name="search" id="search" placeholder="Masukkan nama barang" class="form-control shadow-lg" >
                     <input type="submit" value="Cari" class="btn btn-primary text-dark" style="background-color: #6998ab">
                 </div>

@@ -72,13 +72,11 @@
         <?php } ?>
     </div>
 
-    <div class="mb-3">
-        <label for="expired" class="form-label">Expired</label>
-        <select name="expired" class=""form-control>
-            <option value="Belum kadaluarsa" <?=$item['expired'] == "1" ? 'selected' : '' ?>>Belum kadaluarsa</option>
-            <option value="Sudah kadaluarsa" <?=$item['expired'] =="2" ? 'selected' : '' ?>>Sudah kadaluarsa</option>
-        </select>
-    </div>
+  <div class="mb-3">
+    <label for="status_id" class="form-label">Status</label>
+    <select name="status_id" class="form-control">
+        <option value="1" <?= $medicine['status_id'] == 1 ? 'selected' : '' ?>>Belum Kadaluarsa </option>
+        <option value="2" <?= $medicine['status_id'] == 1 ? 'selected' : '' ?>>Sudah Kadaluarsa </option>
 <div class="mb-3">
     <input type="submit" value="Perbarui" class="btn btn-primary">
 </div>

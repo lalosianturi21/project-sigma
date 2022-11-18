@@ -1,8 +1,9 @@
 <div class="full1">
     <div class="text-dark p-1 text-center shadow-lg fontbg">
         <div class="title1">
-        <h1 >Medicine <i class="fa-solid fa-user"></i> <div class="float-end me-md-2"><a href="./home"></a></i></div><br></h1>
+        <h1 >Medicine <i class="fa-solid fa-pills"></i> <div class="float-end me-md-2"><a href="./home"></a></i></div><br></h1>
     </div>
+    <?= current_user() == NULL ? "-" : current_user()['name'] ?>
     </div>
 
 <form action="/medicine" method="post" enctype="multipart/form-data">
@@ -76,18 +77,8 @@
                     </div>
 
                     <div class="col-md-6">
-                    <label for="status_id" class="form-label">Status Id  <i class="fa-solid fa-address-card"></i></label>
-                    <input type="text" name="status_id" id="status_id"  class="form-control" placeholder="Enter status id" value="<?= set_value('status_id') ?>">
-                        <?php if(isset($errors) and $errors->getError('status_id')) { ?>
-                        <div class="text-danger mt-2">
-                            <?= $error = $errors->getError('status_id'); ?>
-                        </div>
-                        <?php } ?>
-                    </div>
-
-                    <div class="col-md-6">
-                    <label for="item_unit_id" class="form-label">Item Unit Id  <i class="fa-solid fa-rectangle-list"></i></label>
-                    <input type="text" name="item_unit_id" id="item_unit_id"  class="form-control" placeholder="Enter item unit id" value="<?= set_value('item_unit_id') ?>">
+                    <label for="item_unit_id" class="form-label">Item Unit <i class="fa-solid fa-rectangle-list"></i></i></label>
+                    <input type="text" name="item_unit_id" id="item_unit_id"  class="form-control" placeholder="Enter item unit" value="<?= set_value('item_unit_id') ?>">
                         <?php if(isset($errors) and $errors->getError('item_unit_id')) { ?>
                         <div class="text-danger mt-2">
                             <?= $error = $errors->getError('item_unit_id'); ?>
@@ -95,6 +86,17 @@
                         <?php } ?>
                     </div>
 
+                   <div class="col-md-6">
+                    <label for="status_id" class="form-label">Status <i class="fa-solid fa-signal"></i></label>
+                        <select class="form-select" name="status_id" id="status_id">
+                            <option value="1">Tersedia</option>
+                            <option value="2">Tidak Tersedia</option>
+                            
+                        </select>
+                    </div>
+
+
+                    
                     <div class="mb-3">
                         <label for="formFileMultiple" class="form-label">Image Upload <i class="fa-solid fa-images"></i></label>
                         <input class="form-control" type="file" id="formFileMultiple" multiple name="image_upload" id="image_upload" value="<?= set_value('image_upload') ?>">

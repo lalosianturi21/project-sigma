@@ -11,8 +11,9 @@
 <div class="full1">
     <div class="text-dark p-1 text-center shadow-lg fontbg">
         <div class="title1">
-        <h1 > Medicine <i class="fa-solid fa-user"></i> <div class="float-end me-md-2"><a href="./home"></a></i></div><br></h1>
+        <h1 > Medicine <i class="fa-solid fa-pills"></i> <div class="float-end me-md-2"><a href="./home"></a></i></div><br></h1>
         </div>
+        <?= current_user() == NULL ? "-" : current_user()['name'] ?>
     </div>
 
 <form action="/medicine/<?= $medicine['id'] ?>" method="post" enctype="multipart/form-data">
@@ -85,18 +86,9 @@
                         <?php } ?>
                     </div>
 
+                    
                     <div class="col-md-6">
-                    <label for="status_id" class="form-label">Status Id <i class="fa-solid fa-address-card"></i></label> 
-                    <input type="text" class="form-control" placeholder="Enter current stock "  name="status_id" id="status_id"  value="<?= $medicine['status_id'] ?>" >
-                    <?php if(isset($errors) and $errors->getError('status_id')) { ?>
-                        <div class="text-danger mt-2">
-                            <?= $error = $errors->getError('status_id'); ?>
-                        </div>
-                        <?php } ?>
-                    </div>
-
-                    <div class="col-md-6">
-                    <label for="item_unit_id" class="form-label">Item Unit Id  <i class="fa-solid fa-rectangle-list"></i></label> 
+                    <label for="item_unit_id" class="form-label">Item Unit   <i class="fa-solid fa-rectangle-list"></i></label> 
                     <input type="text" class="form-control" placeholder="Enter current stock "  name="item_unit_id" id="item_unit_id"  value="<?= $medicine['item_unit_id'] ?>" >
                     <?php if(isset($errors) and $errors->getError('item_unit_id')) { ?>
                         <div class="text-danger mt-2">
@@ -104,6 +96,17 @@
                         </div>
                         <?php } ?>
                     </div>
+
+                  
+                    <div class="col-md-6">
+                    <label for="status_id" class="form-label">Status  <i class="fa-solid fa-signal"></i></label>
+                        <select class="form-select" name="status_id" id="status_id">
+                        <option value="1" <?= $medicine['status_id'] == 1 ? 'selected' : '' ?>>Tersedia </option>
+                        <option value="2" <?= $medicine['status_id'] == 1 ? 'selected' : '' ?>>Tidak Tersedia</option>
+                            
+                        </select>
+                    </div>
+
 
 
     <div class="mb-3">

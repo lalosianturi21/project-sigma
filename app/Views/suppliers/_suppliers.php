@@ -6,7 +6,7 @@
         <tr class="text-center">
                 <th scope="col">No</th>
                 <th scope="col">Name</th>
-                <th scope="col">Supplier ID</th>
+                <th scope="col">Status ID</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -20,7 +20,15 @@
                         <tr id="supplier_<?= $supplier['id'] ?>" class="text-center" style="text-align: center">
                             <td><?= $index + 1 ?></td>
                             <td><?= $supplier['name'] ?></td>
-                            <td><?= $supplier['status_id'] ?></td>
+                            <td>
+                                <?php
+                                if($supplier['status_id'] == 1):
+                                    echo "<span class='badge bg-primary'>Aktif</span>";
+                                else:
+                                    echo "<span class='badge bg-danger'>Tidak Aktif</span>";
+                                endif;
+                                ?>
+                            </td>
                             <td>
                                 <form action="/suppliers/delete" method="post" class="form-delete">
                                     <input type="hidden" name="_method" value="DELETE" />

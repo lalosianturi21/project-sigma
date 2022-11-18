@@ -35,66 +35,66 @@
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/celebrex.jpg">
     <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/ediva.jpg">
       <div class= "movie-name text-center">Ediva Young</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/ever.webp">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/omega.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
     <div class= "movie-info">
         <img alt="movie poster" src="/images/obatkapsul/diapet.jpg">
         <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/erdobat.jpeg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
     
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/artrodar.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
     
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/lincomycin.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
     
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatkapsul/nitrokaf.jpeg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 </div>
 </div>
 
   
 <div class="all-btn" style="">
-<a href="/items" style="color: white; text-decoration-line: none; ">Semua Obat
+<a href="/medicine" style="color: white; text-decoration-line: none; ">Semua Obat
 </a>
 </div>
 
@@ -110,50 +110,50 @@
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/panadol.jpeg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/promag.png">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/cataflam.webp">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/decolgen.jpeg" style="object-fit: fill;">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
     <div class= "movie-info">
         <img alt="movie poster" src="/images/obattablet/paramex.jpeg">
         <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/mixagrip.jpeg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/bodrex.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obattablet/entrostop.webp">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 </div>
 </div>
@@ -161,7 +161,7 @@
 
 
 <div class="all-btn" style="">
-<a href="/items" style="color: white; text-decoration-line: none; ">Semua Obat
+<a href="/medicine" style="color: white; text-decoration-line: none; ">Semua Obat
 </a>
 </div>
 
@@ -178,66 +178,66 @@
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/curcumaplus.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/sanmol.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/combatrin.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/bodrexindemam.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
     <div class= "movie-info">
         <img alt="movie poster" src="/images/obatsirup/laprosin.jpg">
         <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
   
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/paracetamol.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
     
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/termorex.jpg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 
     
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/dextral.jpeg">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
   
     
   <div class= "movie-info">
       <img alt="movie poster" src="/images/obatsirup/vicksformula.png">
       <div class= "movie-name text-center">Celebrex Celecoxib</div>
-    <button class="btn btn-warning mx-auto d-block shadow">Buy Now &nbsp <i class="fa-solid fa-money-bill"></i></button>
+    <div class= "review"><i class="fa-solid fa-heart"></i>8.8/10</div>
   </div>
 </div>
 </div>
 
   
 <div class="all-btn" style="">
-<a href="/items" style="color: white; text-decoration-line: none; ">Semua Obat
+<a href="/medicine" style="color: white; text-decoration-line: none; ">Semua Obat
 </a>
 </div>
 

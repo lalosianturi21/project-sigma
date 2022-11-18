@@ -35,7 +35,15 @@
                             <td><?= $medicine['max-stock'] ?></td>
                             <td><?= $medicine['current_stock'] ?></td>
                             <td><?= $medicine['price'] ?></td>
-                            <td><?= $medicine['status_id'] ?></td>
+                            <td>
+                                <?php
+                                if($medicine['status_id'] == 1):
+                                    echo "<span class='badge bg-primary'>Tersedia</span>";
+                                else:
+                                    echo "<span class='badge bg-danger'>Tidak Tersedia</span>";
+                                endif;
+                                ?>
+                            </td>
                             <td><?= $medicine['item_unit_id'] ?></td>
                             <td>
                                 <form action="/medicine/delete" method="post" class="form-delete">

@@ -48,8 +48,8 @@ class Sales extends BaseController
             // 'invoice_no' => "required|integer",
             'invoice_date' => 'required|valid_date',
             'supplier_id' => 'required|integer',
-            'grand_total' => 'required|integer',
-            'user_id' => 'required|integer'
+            //'grand_total' => 'required|integer',
+            //'user_id' => 'required|integer'
         ])){
             $data['main_view'] = 'sales/new';
             $data['errors'] = $this->validator;
@@ -101,7 +101,7 @@ class Sales extends BaseController
             // 'invoice_no' => "required|integer",
             'invoice_date' => 'required|valid_date',
             'supplier_id' => 'required|integer',
-            'grand_total' => 'required|integer',
+            //'grand_total' => 'required|integer',
             'user_id' => 'required|integer'
         ])) {
             $sales_model = new SalesModel();

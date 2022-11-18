@@ -59,11 +59,11 @@
                         <input type="time" class="form-control" placeholder="Enter Email">
                     </div>
                     <div class="col-12">
-                        <select class="form-select">
+                        <select class="form-select" name="status_id" id="status_id">
                             <option selected>Purpose Of Appointment</option>
-                            <option value="1">Web Design</option>
-                            <option value="2">Web Development</option>
-                            <option value="3">IOS Developemt</option>
+                            <option value="1">Belum Kadaluarsa</option>
+                            <option value="2">Sudah Kadaluarsa</option>
+                            
                         </select>
                     </div>
                     <div class="col-12">

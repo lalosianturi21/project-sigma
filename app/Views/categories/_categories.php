@@ -7,7 +7,7 @@
                 <th scope="col">No</th>
                 <th scope="col">Name Categories</th>
                 <th scope="col">Description</th>
-                <th scope="col">Status ID</th>
+                <th scope="col">Status</th>
                 <th scope="col">Action</th>
                 
             </tr>
@@ -23,7 +23,15 @@
                             <td><?= $index + 1 ?></td>
                             <td><?= $categorie['name'] ?></td>
                             <td><?= $categorie['description'] ?></td>
-                            <td><?= $categorie['status_id'] ?></td>
+                            <td>
+                                <?php
+                                if($categorie['status_id'] == 1):
+                                    echo "<span class='badge bg-primary'>Aktif</span>";
+                                else:
+                                    echo "<span class='badge bg-danger'>Tidak Aktif</span>";
+                                endif;
+                                ?>
+                            </td>
                             <td>
                                 <form action="/categories/delete" method="post" class="form-delete">
                                     <input type="hidden" name="_method" value="DELETE" />

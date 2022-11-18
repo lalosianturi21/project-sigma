@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Models\PurchasesModel;
 
 class PurchaseItemModel extends Model
 {
@@ -40,14 +41,14 @@ class PurchaseItemModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function get_data_by_purchase($purchase_id){
+    public function get_data_by_sale($purchase_id){
         $query = $this->where('purchase_id', $purchase_id);
         $query = $this->join('medicine', 'medicine.id = purchase_items.medicine_id');
         $query = $this->select(
             'purchase_items.*, medicine.name AS medicine_name'
         );
         return $query->get()->getResult();
-}
+    }
 
 public function get_data($id){
     return $this->find($id);
@@ -62,6 +63,11 @@ public function create_data($params){
         'price' => $params->getVar('price'),
         'subtotal' => $subtotal
     ];
-    return $this->save($data);
+    if($this->save($data)) {
+        $purchase_item_model = new PurchasesModel() ;
+        return $purchase_item_model->update_grand_total($params->getVar('purchase_id'));
+       } else {
+        return false;
+       }
 }
 }

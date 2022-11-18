@@ -22,10 +22,10 @@ class Purchases extends BaseController
             return redirect()->to('/');
         }
 
-        $purchases_model = new PurchasesModel();
+       $purchases_model = new PurchasesModel();
         $search = $this->request->getVar('search') ?? '';
-        $data['purchases'] = $purchases_model->search_data($search);
-        $data['pager'] = $purchases_model->pager;
+        $data['purchases'] =$purchases_model->search_data($search);
+        $data['pager'] =$purchases_model->pager;
         if($this->request->isAJAX()) {
             return view('purchases/_purchases', $data);
         } else {
@@ -44,13 +44,13 @@ class Purchases extends BaseController
     public function create()
     {
         if(!$this->validate([
-            'invoice_no' => "required|integer",
+            // 'invoice_no' => "required|integer",
             'invoice_date' => 'required|valid_date',
             'supplier_id' => 'required|integer',
-            'grand_total' => 'required|integer',
-            'user_id' => 'required|integer'
+            //'grand_total' => 'required|integer',
+            //'user_id' => 'required|integer'
         ])){
-            $data['main_view'] = 'supplier/new';
+            $data['main_view'] = 'purchases/new';
             $data['errors'] = $this->validator;
             return view('layout', $data);
         }
@@ -97,10 +97,10 @@ class Purchases extends BaseController
 
     public function update($id){
         if(!$this->validate([
-            'invoice_no' => "required|integer",
+            // 'invoice_no' => "required|integer",
             'invoice_date' => 'required|valid_date',
             'supplier_id' => 'required|integer',
-            'grand_total' => 'required|decimal',
+            //'grand_total' => 'required|integer',
             'user_id' => 'required|integer'
         ])) {
             $purchases_model = new PurchasesModel();
@@ -120,7 +120,7 @@ class Purchases extends BaseController
         $purchases_model = new PurchasesModel();
         $purchase_item_model = new PurchaseItemModel();
         $data['purchase'] = $purchases_model->get_data($id);
-        $data['purchase_items'] = $purchase_item_model->get_data_by_purchase($id);
+        $data['purchase_items'] = $purchase_item_model->get_data_by_sale($id);
         $data['main_view'] = 'purchases/show';
         return view('layout', $data);
         

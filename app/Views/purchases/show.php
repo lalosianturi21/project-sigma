@@ -1,11 +1,14 @@
 <div class="full1">
     <div class="text-dark p-1 text-center shadow-lg fontbg">
         <div class="title1">
-        <h1 >Purchases<i class="fa-solid fa-user"></i> <div class="float-end me-md-2"><a href="./home"></a></i></div><br></h1>
+        <h1 >Purchases <i class="fa-brands fa-shopify"></i>  <div class="float-end me-md-2"><a href="./home"></a></i></div><br></h1>
     </div>
+    <?= current_user() == NULL ? "-" : current_user()['name'] ?>
     </div>
-
-<table class="table table-bordered">
+    
+    <div class="table-responsive container shadow-lg rounded mt-3">
+<table class="table shadow-lg">
+  <table class="table caption-top">
     <tbody>
         <tr>
             <th width="30%">ID</th>
@@ -25,7 +28,7 @@
         </tr>
         <tr>
             <th width="30%">Grand Total</th>
-            <td><?= $purchase["grand_total"] ?></td>
+            <td><?= thousand_separator($purchase['grand_total']) ?></td>
         </tr>
         <tr>
             <th width="30%">User Id</th>
@@ -33,14 +36,24 @@
         </tr>
     </tbody>
 </table>
+</table>
+</div>
 
-<button type="button" class="btn btn-sm btn-warning mb-2" data-bs-toggle="modal" data-bs-target="#modal-add-sale-item">
-  Tambah Sale Item
+<br>
+<div class="float-md-none">
+      <div class="container pt-2">
+   <button class="btn btn-dark button1 mb-4" data-bs-toggle="modal" data-bs-target="#modal-add-sale-item">
+  Tambah Purchase Item <i class="fa-solid fa-cart-arrow-down"></i>
 </button>
+</div>
+</div>
 
 
-<table class="table table-hover table-bordered">
-  <thead>
+<div class="table-responsive container shadow-lg rounded">
+<table class="table shadow-lg">
+  <table class="table caption-top">
+  <caption>Daftar List Purchase Item</caption>
+        <thead class="table-dark text-light rounded">
     <th>No</th>
     <th>Item</th>
     <th>Qty</th>
@@ -59,6 +72,7 @@
     <?php endforeach; ?>
   </tbody>
 </table>
+    </div>
     </div>
 <div class="modal fade" tabindex="-1" id="modal-add-sale-item">
   <div class="modal-dialog">

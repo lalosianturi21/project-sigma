@@ -14,7 +14,7 @@ class SalesModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['invoice_no', 'invoice_date', 'supplier_id', 'grand_total'];
+    protected $allowedFields    = ['invoice_no', 'invoice_date', 'supplier_id', 'grand_total', 'user_id'];
 
     // Dates
     protected $useTimestamps = false;
@@ -72,7 +72,8 @@ public function create_data($params){
         'invoice_no' => $invoice_no,
         'invoice_date' => $params->getVar('invoice_date'),
         'supplier_id' => $params->getVar('supplier_id'),
-        'user_id' => current_user() ['id']
+        'user_id' => current_user() ['id'],
+        
     ];
     return $this->save($data);
 }

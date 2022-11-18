@@ -4,6 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
+
 class PurchasesModel extends Model
 {
     protected $DBGroup          = 'default';
@@ -14,7 +15,7 @@ class PurchasesModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['invoice_no', 'invoice_date','supplier_id', 'grand_total', 'user_id'];
+    protected $allowedFields    = ['invoice_no', 'invoice_date','supplier_id', 'grand_total', 'user_id','purchase_id'];
 
     // Dates
     protected $useTimestamps = false;
@@ -73,8 +74,8 @@ public function create_data($params){
         'invoice_no' => $invoice_no,
         'invoice_date' => $params->getVar('invoice_date'),
         'supplier_id' => $params->getVar('supplier_id'),
-        'grand_total' => $params->getVar('grand_total'),
-        'user_id' => $params->getVar('user_id')
+        'user_id' => current_user() ['id'],
+        
     ];
     return $this->save($data);
 }
@@ -89,5 +90,17 @@ public function update_data($id, $params) {
     ];
     return $this->update($id, $data);
 }
+
+public function update_grand_total($id) {
+    $query = $this->where('purchases.id', $id);
+    $query = $query->join('purchase_items', 'purchase_items.purchase_id = purchases.id');
+    $query = $query->selectSum('subtotal', 'grand_total');
+    $query = $query->get()->getRow();
+    $data = [
+        'grand_total'  => $query->grand_total
+    ];
+    return $this->update($id, $data);
+}
+
 
 }
